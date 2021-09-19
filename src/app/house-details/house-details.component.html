@@ -1,0 +1,44 @@
+<div container style="text-align:center">
+    <div class="container-fluid">
+    <div row *ngIf="currentHouse">
+      <div class="col-md-12 justify-content-center">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">{{currentHouse.name | uppercase}}</h4><hr><br>
+            <p class="card-text  text-left">
+                URL : {{currentHouse.url}}<br>
+                Name : {{currentHouse.name}}<br>
+                Region : {{currentHouse.region}}<br>
+                Coat of Arms : {{currentHouse.coatOfArms}}<br>
+                Words : {{currentHouse.words}}<br>
+                Titles : <span *ngFor="let title of currentHouse.titles;let first=first;let last=last">{{title}}{{last ? '' : ', '}}</span><br>
+                Seats : <span *ngFor="let seat of currentHouse.seats;let first=first;let last=last">{{seat}}{{last ? '' : ', '}}</span><br>
+                Current Lord : {{currentHouse.currentLord}}<br>
+                Heir : {{currentHouse.heir}}<br>
+                Overload : {{currentHouse.overload}}<br>
+                Founded : {{currentHouse.founded}}<br>
+                Founder : {{currentHouse.founder}}<br>
+                Cadet Branches : <span *ngFor="let cadet of currentHouse.cadetBranches;let first=first;let last=last">{{cadet}}{{last ? '' : ', '}}</span><br>
+                Sworn Members : <span *ngFor="let sworn of currentHouse.swornMembers;let first=first;let last=last">{{sworn}}{{last ? '' : ', '}}</span><br>
+            </p><br><br><hr>
+            <a (click)="goBackToPrevPage()"><button type="button">Go Back</button></a><br><br>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+      <div class="about"><br><br>
+        <button>
+          <h1>About</h1>
+        </button>
+      </div>
+      <br><br>
+      <p>All the data from the universe of Ice And Fire you've ever wanted!</p>
+      <br><br>
+      <p class="end">Copyright © 2018 - Chirag Gahlawat</p><br><br>
+  </div>
+  
+  

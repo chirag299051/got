@@ -1,0 +1,24 @@
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(30,30,30);
+    color: white;
+    text-align: center;
+ }
+
+ .footer .about button {
+	background-color: rgb(30,30,30);
+	color: rgb(220, 220, 220);;
+	border-radius: 5%;
+}
+
+.footer .about button:hover {
+	background-color: rgb(0, 0, 0);
+} 
+
+.end {
+	font-size: .7em;
+	color: rgb(200, 200, 200);;
+}
+

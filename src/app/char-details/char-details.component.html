@@ -1,0 +1,41 @@
+<div container style="text-align:center">
+    <div class="container-fluid">
+    <div row *ngIf="currentChar">
+      <div class="col-md-12 justify-content-center">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">{{currentChar.aliases[0] | uppercase}}</h4><hr><br>
+            <p class="card-text text-left">
+                URL : {{currentChar.url}}<br>
+                Name : {{currentChar.name}}<br>
+                Gender : {{currentChar.gender}}<br>
+                Culture : {{currentChar.culture}}<br>
+                Born : {{currentChar.born}}<br>
+                Died : {{currentChar.died}}<br>
+                Aliases : <span *ngFor="let alias of currentChar.aliases;let first=first;let last=last">{{alias}}{{last ? '' : ', '}}</span><br>
+                Allegiances : <span *ngFor="let allegiance of currentChar.allegiances;let first=first;let last=last">{{allegiance}}{{last ? '' : ', '}}</span><br>
+                Books : <span *ngFor="let book of currentChar.books;let first=first;let last=last">{{book}}{{last ? '' : ', '}}</span><br>
+                Tv Series : <span *ngFor="let tv of currentChar.tvSeries;let first=first;let last=last">{{tv}}{{last ? '' : ', '}}</span><br>
+                Played By : <span *ngFor="let played of currentChar.playedBy;let first=first;let last=last">{{played}}{{last ? '' : ', '}}</span><br>
+            </p><br><br><hr>
+            <a (click)="goBackToPrevPage()"><button type="button">Go Back</button></a><br><br>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+      <div class="about"><br><br>
+        <button>
+          <h1>About</h1>
+        </button>
+      </div>
+      <br><br>
+      <p>All the data from the universe of Ice And Fire you've ever wanted!</p>
+      <br><br>
+      <p class="end">Copyright © 2018 - Chirag Gahlawat</p><br><br>
+  </div>
+  
+  

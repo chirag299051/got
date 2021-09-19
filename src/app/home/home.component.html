@@ -1,0 +1,58 @@
+<div style="text-align:center">
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="card-deck">
+
+        <div class="col-sm-3">
+          <div class="card" id="left">
+            <img class="card-img-top" src="assets/books.jpg">
+            <div class="card-block">
+              <h4 class="card-title" *ngIf="allBooks.length>0">BOOKS</h4>
+              <ul *ngFor="let book of allBooks" class="list-group list-group-flush">
+                  <li class="list-group-item"><a [routerLink]="['/book',book.name]" > {{book.name}} </a></li>
+                </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-3">
+          <div class="card">
+            <img class="card-img-top" src="assets/char.jpg">
+            <div class="card-block">
+              <h4 class="card-title" *ngIf="allCharacters.length>0">CHARACTERS</h4>
+              <ul *ngFor="let char of allCharacters" class="list-group list-group-flush">
+                  <li class="list-group-item"><a [routerLink]="['/char',char.url]"> {{char.aliases}} </a></li>
+                </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-3">
+          <div class="card">
+            <img class="card-img-top" src="assets/houses.jpg">
+            <div class="card-block">
+              <h4 class="card-title" >HOUSES</h4>
+              <ul *ngFor="let house of allHouses" class="list-group list-group-flush">
+                  <li class="list-group-item"><a [routerLink]="['/house',house.name]"> {{house.name}} </a></li>
+                </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+      <div class="about"><br><br>
+        <button>
+          <h1>About</h1>
+        </button>
+      </div>
+      <br><br>
+      <p>All the data from the universe of Ice And Fire you've ever wanted!</p>
+      <br><br>
+      <p class="end">Copyright © 2018 - Chirag Gahlawat</p><br><br>
+  </div>
+ 
+</div>
